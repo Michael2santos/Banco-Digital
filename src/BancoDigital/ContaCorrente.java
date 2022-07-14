@@ -1,31 +1,19 @@
 package BancoDigital;
 
-public class ContaCorrente {
-    private int agencia;
-    private int numero;
-    private double saldo;
+import javax.sound.midi.Sequence;
 
-    public void sacar(){
+public class ContaCorrente extends  Conta{
 
+
+    public ContaCorrente(Cliente cliente) {
+        super(cliente);
     }
 
-    public void depositar(){
-
-    }
-
-    public void tranferir(){
-
-    }
-
-    public int getAgencia() {
-        return agencia;
-    }
-
-    public int getNumero() {
-        return numero;
-    }
-
-    public double getSaldo() {
-        return saldo;
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Poupança ===");
+        super.imprimirInfo();
     }
 }
+
+

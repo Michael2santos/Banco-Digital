@@ -1,19 +1,15 @@
 package BancoDigital;
 
-public class ContaPoupanca {
-    private int agencia;
-    private int numero;
-    private double saldo;
+public class ContaPoupanca extends Conta {
 
-    public void sacar(){
-
+    public ContaPoupanca(Cliente cliente) {
+        super(cliente);
     }
 
-    public void depositar(){
-
+    @Override
+    public void imprimirExtrato() {
+        System.out.println("=== Extrato Conta Poupança ===");
+        super.imprimirInfo();
     }
 
-    public void tranferir(){
-
-    }
 }
